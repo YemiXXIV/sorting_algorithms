@@ -20,10 +20,10 @@ void insertion_sort_list(listint_t **list)
 			temp = current->next;
 			current->next = temp->next;
 			temp->prev = current->prev;
-			
+
 			if (current->prev)
 				current->prev->next = temp;
-			
+
 			if (temp->next)
 				temp->next->prev = current;
 
@@ -34,7 +34,7 @@ void insertion_sort_list(listint_t **list)
 				current = temp->prev;
 			else
 				*list = temp;
-			
+
 			print_list(*list);
 		}
 		current = current->next;
